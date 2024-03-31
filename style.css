@@ -1,0 +1,202 @@
+body {
+    font-family: sans-serif;
+    background-color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #36bbce;
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 10px;
+    display: block;
+}
+
+nav {
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    padding: 25px 100px 25px 95px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    margin-top: 45px;
+    margin-bottom: 40px;
+}
+
+.post-text {
+    font-size: 24px;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.post {
+    background-color: white;
+    padding: 15px 45px 30px 45px;
+    width: 400px;
+    margin: 20px;
+    position: relative;
+}
+
+.article-but {
+    text-decoration: none;
+    background-color: #133aac;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 75px 10px 75px;
+    display: block;
+    border: medium solid transparent;
+}
+
+.full-image {
+    margin: 100px 0px 100px 0px;
+}
+
+.social {
+    /* display: block; */
+    width: 30px;
+}
+
+footer {
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 30px 20px 45px;
+}
+
+.footer-text {
+    font-size: 24px;
+    margin-right: 30px;
+}
+
+.footer-text span {
+    color: #850AE5;
+    font-weight: bolder;
+}
+
+
+/* ПРИКЛАД ВИРІШЕННЯ ЗАВДАННЯ 9.2, НЕ ЗАБУДЬ ВІДОКРЕМИТИ  Напиши — отримай промокод! ТА ПОСИЛАННЯ В КАРТИНКАХ (ІНСТА, ФБ) В КОРЕМИ DIV З КЛАСОМ social_block*/
+.social_block{
+    position: fixed;
+    right: 0px;
+    top: 260px;
+    background-color: pink;
+    height: 120px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 10% 0 0 10%;
+    border: 3px dotted purple;  
+}
+
+.social_block p{
+    width: 100px;
+}
+
+/* ПРИКЛАД ВИРІШЕННЯ ЗАВДАННЯ 9.3, можна для окремих постів в HTML зробити окремі id та прописати те саме окремо для кожної із акцентуючих картинок*/
+.post::before{
+    content: url("https://i.ibb.co/6NGS28g/Jw9N46X.png");
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 170px; 
+    height: 100px;
+    transform: rotate(-15deg);
+    border: medium dotted transparent;
+}
+
+.post::after{
+    content: url("https://i.ibb.co/HG3S0bX/sdddgdg.png");
+    position: absolute;
+    top: 350px;
+    left: 350px;
+    width: 150px; 
+    height: 150px;
+    transform: rotate(-15deg);
+    border: medium dotted transparent;
+}
+
+
+/* ПРИКЛАД ВИРІШЕННЯ ЗАВДАННЯ 9.4 */
+h1::before{
+    content: url("https://i.ibb.co/8zkHp43/sfdxfdv.png");
+}
+
+h1::after{
+    content: url("https://i.ibb.co/8zkHp43/sfdxfdv.png");
+}
+
+/* ПРИКЛАД ВИРІШЕННЯ ЗАВДАННЯ 9.5 */
+.address::before{
+    content: url(https://i.ibb.co/kcmts3m/Jw9SwFI.png);
+}
+
+.tel::before{
+    content: url(https://i.ibb.co/zfyt1Mm/p4.png);
+}
+
+
+/* ПРИКЛАД ВИРІШЕННЯ ЗАВДАННЯ 10.2 */
+.post:hover::after{
+    border-radius: 100%;
+    border: medium dashed #5D3FD3;
+    transition: border 1s;
+
+}
+
+.post:hover::before{
+    border-radius: 100%;
+    border: medium dotted red;
+    transition: border 1s;
+}
+
+.post:hover{
+    background-color: violet; 
+    color: white;
+    transition: color .2s, background-color .2s;
+}
+
+.nav-link:hover{
+color: violet;
+transition: color .2s;
+}
+
+.button:hover{
+    background-color: violet; 
+    color: white;
+    transition: color .2s, background-color .2s;
+}
+
+.post:hover .article-but{
+    background-color: white;
+    color: black;
+    border: medium solid #7F00FF;
+    transition: color .2s, background-color .2s;
+
+}
